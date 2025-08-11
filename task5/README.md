@@ -28,4 +28,4 @@ CSS3 (Media Queries, Animations, Transitions)
 JavaScript (DOM Manipulation, Scroll Events)
 
 Live Demo:
-Deployed via GitHub Pages — Live Link Here
+Deployed via GitHub Pages — Live Link Here https://shankar-sssj.github.io/Elevate-Labs-Internship-task5/
