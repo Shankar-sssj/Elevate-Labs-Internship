@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f9f871 0%, #ffb347 50%, #ffccff 100%);
+    background-attachment: fixed;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffccff;
+}
+
+.hero {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.category {
+    padding: 20px;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item {
+        width: 80%;
+    }
+    .hero {
+        padding: 30px 10px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    font-size: 18px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+
+#backToTop:hover {
+    background: #ffb347;
+}
